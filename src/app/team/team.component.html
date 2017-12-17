@@ -1,0 +1,8 @@
+
+<h2>{{ member.nickName | uppercase }} Details</h2>
+<div><span>id: </span>{{member.id}}</div>
+<div>
+  <label for="">name:
+    <input type="text" [(ngModel)]="member.name">
+  </label>
+<p>His birthday at {{ member.birthday | date:"fullDate"}}</p>
