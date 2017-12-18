@@ -1,8 +1,18 @@
 
-<h2>{{ member.nickName | uppercase }} Details</h2>
-<div><span>id: </span>{{member.id}}</div>
-<div>
+<h2>{{title | uppercase}}</h2>
+
+<ul class="heroes">
+  <li *ngFor="let member of members"
+      (click)="onSelect(member)"
+      [class.selected]="member === selectedMember">
+      <span class="badge">{{member.id}}</span> {{member.name}}
+  </li>
+</ul>
+<div *ngIf="selectedMember">
+  <h2>{{ selectedMember.nickName | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedMember.id}}</div>
   <label for="">name:
-    <input type="text" [(ngModel)]="member.name">
+    <input type="text" [(ngModel)]="selectedMember.name">
   </label>
-<p>His birthday at {{ member.birthday | date:"fullDate"}}</p>
+  <p>Birthday at {{ selectedMember.birthday | date:"fullDate"}}</p>
+</div>
