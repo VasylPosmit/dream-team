@@ -1,4 +1,4 @@
-import { Member } from './member';
+import { Member } from '../member';
 
 export const MEMBERS: Member[] = [
   {
@@ -19,7 +19,7 @@ export const MEMBERS: Member[] = [
    id: 14,
    name: 'Vasyl Posmit',
    nickName: 'VP',
-   skills: ['design', 'infographincs'],
+   skills: ['sales', 'management', 'frontend', 'infographincs'],
  },
   {
    birthday: new Date(1988, 3, 15), // April 15, 1988
@@ -47,7 +47,7 @@ export const MEMBERS: Member[] = [
    id: 18,
    name: 'Olexii Minakov',
    nickName: 'Publicist',
-   skills: ['writing', 'infographincs'],
+   skills: ['writing', 'gamification'],
  },
   {
    birthday: new Date(1988, 3, 15), // April 15, 1988

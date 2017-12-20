@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Member } from './member';
 import { MEMBERS } from './mock-team';
+import { Member } from '../member';
 
 @Component({
   selector: 'vp-team',
@@ -10,13 +10,6 @@ import { MEMBERS } from './mock-team';
 export class TeamComponent implements OnInit {
   title = 'The Dream Team Members:';
   members = MEMBERS;
-  member: Member = {
-    birthday: new Date(1988, 3, 15), // April 15, 1988
-    id: 2,
-    name: 'Jurii Kurilchuk',
-    nickName: 'Bumbox',
-    skills: ['design', 'infographincs'],
-  };
   selectedMember: Member;
 
   onSelect(member: Member): void {
