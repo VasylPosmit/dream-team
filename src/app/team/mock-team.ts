@@ -60,7 +60,7 @@ export const MEMBERS: Member[] = [
    birthday: new Date(1988, 3, 15), // April 15, 1988
    id: 20,
    name: 'Bogdan Domnenko',
-   nickName: 'Data Satanist (Volvo)',
+   nickName: 'Data (Volvo) Satanist',
    skills: ['design', 'infographincs'],
  },
   {

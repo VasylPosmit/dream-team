@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MEMBERS } from './mock-team';
+
 import { Member } from '../member';
+import { TeamService } from '../team.service';
 
 @Component({
   selector: 'vp-team',
@@ -9,16 +10,21 @@ import { Member } from '../member';
 })
 export class TeamComponent implements OnInit {
   title = 'The Dream Team Members:';
-  members = MEMBERS;
+  members: Member[];
   selectedMember: Member;
+
+  constructor(private teamService: TeamService) {}
+
+  ngOnInit() {
+    this.getMembers();
+    console.log('Team are gathered! ');
+  }
 
   onSelect(member: Member): void {
     this.selectedMember = member;
   }
-  constructor() { }
-
-  ngOnInit() {
-    console.log('TeamComponent init: ');
+  getMembers(): void {
+    this.teamService.getMembersList()
+      .subscribe( memberList => this.members = memberList) ;
   }
-
 }
