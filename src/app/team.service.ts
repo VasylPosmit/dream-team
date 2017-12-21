@@ -15,4 +15,8 @@ export class TeamService {
     this.messageService.add('TeamService: fetched team members')
     return of(MEMBERS);
   }
+  getMember(id: number): Observable<Member> {
+    this.messageService.add(`TeamService: fetched hero id=${id}`);
+    return of(MEMBERS.find(member => member.id === id));
+  }
 }

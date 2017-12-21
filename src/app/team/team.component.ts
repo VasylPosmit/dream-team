@@ -20,9 +20,6 @@ export class TeamComponent implements OnInit {
     console.log('Team are gathered! ');
   }
 
-  onSelect(member: Member): void {
-    this.selectedMember = member;
-  }
   getMembers(): void {
     this.teamService.getMembersList()
       .subscribe( memberList => this.members = memberList) ;

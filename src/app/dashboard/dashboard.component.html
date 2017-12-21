@@ -1,0 +1,10 @@
+<h3>{{'Top members' | uppercase}}</h3>
+<div class="grid grid-pad">
+  <a class="col-1-4"
+      *ngFor="let member of members"
+      routerLink="/detail/{{member.id}}">
+    <div class="module member">
+      <h4>{{member.name}}</h4>
+    </div>
+  </a>
+</div>
