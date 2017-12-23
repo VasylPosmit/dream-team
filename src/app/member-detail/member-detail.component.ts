@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Member } from '../member';
-import { TeamService }  from '../team.service';
+import { Member } from '../common/member';
+import { TeamService }  from '../common/team.service';
 
 @Component({
   selector: 'vp-member-detail',

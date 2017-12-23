@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Member } from '../member';
-import { TeamService } from '../team.service';
+import { Member } from '../common/member';
+import { TeamService } from '../common/team.service';
 
 @Component({
   selector: 'vp-dashboard',
