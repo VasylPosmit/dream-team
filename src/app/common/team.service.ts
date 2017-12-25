@@ -84,6 +84,18 @@ export class TeamService {
       catchError(this.handleError<Member>('deleteMember'))
     );
   }
+  /* GET members whose name contains search term */
+  searchMembers(term: string): Observable<Member[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<Member[]>(`api/members/?name=${term}`)
+    .pipe(
+      tap(_ => this.log(`found members matching "${term}"`)),
+      catchError(this.handleError<Member[]>('searchMembers', []))
+    );
+  }
   /** Log a TeamService message with the MessageService */
   private log(message: string) {
     this.messageService.add('TeamService: ' + message);

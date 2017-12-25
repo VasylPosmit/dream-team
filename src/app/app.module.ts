@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService }  from './common/in-memory-data.service';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './common/message.service';
 import { TeamComponent } from './team/team.component';
 import { TeamService } from './common/team.service';
+import { MemberSearchComponent } from './member-search/member-search.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TeamService } from './common/team.service';
     TeamComponent,
     MemberDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    MemberSearchComponent
   ],
   imports: [
     AppRoutingModule,

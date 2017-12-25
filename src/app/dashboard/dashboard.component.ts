@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.teamService.getMembersList()
-      .subscribe(team => this.members = team.filter(member => member.isSelected ));
+      .subscribe(team => this.members = team.filter(member => member.isChosen ));
   }
 }
