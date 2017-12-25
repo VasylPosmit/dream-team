@@ -52,12 +52,12 @@
 
 .button {
   background-color: #eee;
-  border: none;
-  padding: 5px 10px;
   border-radius: 4px;
-  cursor: pointer;
+  border: none;
   cursor: hand;
+  cursor: pointer;
   font-family: Arial;
+  padding: 5px 10px;
 }
 
 button:hover {
@@ -65,9 +65,9 @@ button:hover {
 }
 
 button.delete {
-  position: relative;
-  left: 194px;
-  top: -32px;
   background-color: gray !important;
   color: white;
+  left: 194px;
+  position: relative;
+  top: -32px;
 }
