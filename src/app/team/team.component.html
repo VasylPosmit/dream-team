@@ -9,4 +9,18 @@
   </li>
 </ul>
 
+<h3>Add member</h3>
+<div>
+  <label>Name:
+    <input #memberName />
+  </label>
+  <label>Nick:
+    <input #memberNick />
+  </label>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(memberName.value, memberNick.value); memberName.value = memberNick.value= ''">
+    Add
+  </button>
+</div>
 <vp-member-detail [member]="selectedMember"></vp-member-detail>

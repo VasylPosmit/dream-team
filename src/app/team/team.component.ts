@@ -24,4 +24,12 @@ export class TeamComponent implements OnInit {
     this.teamService.getMembersList()
       .subscribe( memberList => this.members = memberList) ;
   }
+  add(name: string, nickName: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.teamService.addMember({ name, nickName } as Hero)
+      .subscribe(member => {
+        this.members.push(member);
+      });
+  }
 }

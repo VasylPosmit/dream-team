@@ -17,6 +17,7 @@ export const MEMBERS: Member[] = [
  }, {
    birthday: new Date(1988, 3, 15), // April 15, 1988
    id: 14,
+   isSelected: true,
    name: 'Vasyl Posmit',
    nickName: 'VP',
    skills: ['sales', 'management', 'frontend', 'infographincs'],
@@ -24,6 +25,7 @@ export const MEMBERS: Member[] = [
   {
    birthday: new Date(1988, 3, 15), // April 15, 1988
    id: 15,
+   isSelected: true,
    name: 'Maks Sidorenko',
    nickName: 'Strategist',
    skills: ['sales', 'maangement'],
@@ -31,6 +33,7 @@ export const MEMBERS: Member[] = [
   {
    birthday: new Date(1988, 3, 15), // April 15, 1988
    id: 16,
+   isSelected: true,
    name: 'Alexander Avramenko',
    nickName: 'Grandmaster',
    skills: ['people', 'HR'],
@@ -38,6 +41,7 @@ export const MEMBERS: Member[] = [
   {
    birthday: new Date(1988, 3, 15), // April 15, 1988
    id: 17,
+   isSelected: true,
    name: 'Andrey Novak',
    nickName: 'Destroyer',
    skills: ['frontend', 'infographincs'],
