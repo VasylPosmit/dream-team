@@ -27,9 +27,15 @@ export class TeamComponent implements OnInit {
   add(name: string, nickName: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.teamService.addMember({ name, nickName } as Hero)
+    this.teamService.addMember({ name, nickName } as Member)
       .subscribe(member => {
         this.members.push(member);
       });
+  }
+  delete(member: Member): void {
+    this.members = this.members.filter(current => current !== member);
+    // If you neglect to subscribe(), the service will not send the delete request to the server!
+    // As a rule, an Observable does nothing until something subscribes!
+    this.teamService.deleteMember(member).subscribe();
   }
 }

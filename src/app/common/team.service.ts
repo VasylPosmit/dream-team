@@ -67,13 +67,23 @@ export class TeamService {
   }
   /** POST: add a new member to the server */
   addMember (member: Member): Observable<Member> {
-    return this.http.post<Hero>(this.membersUrl, member, httpOptions)
+    return this.http.post<Member>(this.membersUrl, member, httpOptions)
     .pipe(
       tap((member: Member) => this.log(`added member w/ id=${member.id}`)),
-      catchError(this.handleError<Hero>('addMember'))
+      catchError(this.handleError<Member>('addMember'))
     );
   }
+  /** DELETE: delete the member from the server */
+  deleteMember (member: Member | number): Observable<Member> {
+    const id = typeof member === 'number' ? member : member.id;
+    const url = `${this.membersUrl}/${id}`;
 
+    return this.http.delete<Member>(url, httpOptions)
+    .pipe(
+      tap(_ => this.log(`deleted member id=${id}`)),
+      catchError(this.handleError<Member>('deleteMember'))
+    );
+  }
   /** Log a TeamService message with the MessageService */
   private log(message: string) {
     this.messageService.add('TeamService: ' + message);
